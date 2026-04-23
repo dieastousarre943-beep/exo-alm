@@ -130,47 +130,39 @@ button { padding: 12px 25px; border-radius: 8px; border: none; cursor: pointer; 
 .btn-white { background: white; color: var(--blue); }
 
 .section-title { text-align: center; margin: 40px 0 20px; }
-@media(max-width: 430px) {
+@media screen and (max-width: 768px) {
 
     .A {
-       grid-template-columns:1fr;
-    }
-
-    .A2 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-         grid-template-columns: repeat(1fr);
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
 
     .A2 a {
-        margin: 5px 10px;
-         grid-template-columns: repeat(1fr);
+        margin: 10px;
+        display: inline-block;
     }
 
     .C {
         flex-direction: column;
         text-align: center;
         padding: 20px;
-         grid-template-columns: repeat(1fr);
     }
 
     .C4 {
         text-align: center;
-         grid-template-columns: repeat(1fr);
     }
 
     .C3 {
         flex-direction: column;
-         grid-template-columns: repeat(1fr);
     }
 
     .D {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 colonne */
     }
 
     .E {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 colonne */
     }
 
     .G {
@@ -179,11 +171,11 @@ button { padding: 12px 25px; border-radius: 8px; border: none; cursor: pointer; 
 
     .F {
         padding: 30px 15px;
-         grid-template-columns: repeat(1fr);
     }
 }
 
 
+/* 📲 TABLETTE (iPad) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
     .A {
@@ -200,11 +192,11 @@ button { padding: 12px 25px; border-radius: 8px; border: none; cursor: pointer; 
     }
 
     .D {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
     }
 
     .E {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
     }
 
     .G {
