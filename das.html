@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mes infos</title>
+    <style>
+        :root {
+    --blue: #3b5998;
+    --light-bg: #f8faff;
+    --text: #333;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: var(--light-bg);
+    color: var(--text);
+}
+
+.A {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    align-items: center;
+}
+.A1 { font-weight: bold; background: #3b5998; color: white; padding: 10px; border-radius: 8px; }
+.A2 a { margin-left: 20px; text-decoration: none; color: #555; font-size: 14px; }
+
+.B { max-width: 1100px; margin: auto; padding: 20px; }
+
+.C { 
+    display: flex; 
+    align-items: center; 
+    gap: 40px; 
+    background: white; 
+    padding: 40px; 
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+.C1 { flex: 1; }
+.C1 span { background: #eee; padding: 5px 15px; border-radius: 20px; font-size: 12px; }
+.C4 { flex: 1; text-align: right; }
+.C4 img { width: 100%; max-width: 400px; border-radius: 20px; }
+
+.C3 { display: flex; gap: 20px; margin-top: 30px; }
+.C3 div { background: #f0f4ff; padding: 15px; border-radius: 15px; flex: 1; font-size: 13px; }
+
+.D { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 20px; 
+    margin-bottom: 50px;
+}
+
+.D1 { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 20px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.D1 h3 {
+    margin-top: 0;
+    color: #3b5998;
+}
+.E { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 25px; 
+    margin-bottom: 50px;
+}
+
+.E1 { 
+    background: white; 
+    padding: 15px; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.E2 { 
+    width: 100%; 
+    height: 160px; 
+    background: #f0f0f0; 
+    border-radius: 12px; 
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.E2 img { width: 100%; height: 100%; object-fit: cover; }
+.G {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.G1 {
+    background: white;
+    flex: 1; 
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.G2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3b5998; 
+    margin-bottom: 10px;
+}
+
+.G1 p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+.F { 
+    background: var(--blue); 
+    color: white; 
+    text-align: center; 
+    padding: 60px; 
+    border-radius: 30px; 
+}
+.F1 { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+button { padding: 12px 25px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; }
+.btn-primary { background: rgb(1, 21, 54); color: white; }
+.btn-secondary { background: #eef2ff; color: var(--blue); }
+.btn-white { background: white; color: var(--blue); }
+
+.section-title { text-align: center; margin: 40px 0 20px; }
+@media(max-width: 768px) {
+
+    .A {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .A2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .A2 a {
+        margin: 5px 10px;
+    }
+
+    .C {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .C4 {
+        text-align: center;
+    }
+
+    .C3 {
+        flex-direction: column;
+    }
+
+    .D {
+        grid-template-columns: 1fr;
+    }
+
+    .E {
+        grid-template-columns: 1fr;
+    }
+
+    .G {
+        flex-direction: column;
+    }
+
+    .F {
+        padding: 30px 15px;
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .A {
+        padding: 20px 5%;
+    }
+
+    .C {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .C3 {
+        justify-content: center;
+    }
+
+    .D {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .E {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .G {
+        flex-wrap: wrap;
+    }
+
+    .G1 {
+        flex: 1 1 45%;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="A">
+        <div class="A1">AN</div>
+        <div class="A2">
+            <a href="#">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Projets</a>
+            <a href="#">Profil</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <main class="B">
+        <section class="C">
+            <div class="C1">
+                <span>✨ Portfolio moderne & évolutif</span>
+                <h1>Construire mon parcours avec passion, créativité et ambition</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="C2">
+                    <button class="btn-primary">Voir mes projets</button>
+                    <button class="btn-secondary">Me contacter</button>
+                </div>
+                <div class="C3">
+                    <div><strong>5+</strong> <br> Projets réalisés</div>
+                    <div><strong>100%</strong> <br> Motivation & progression</div>
+                    <div><strong>UI</strong> <br> Design & web moderne</div>
+                </div>
+            </div>
+            <div class="C4">
+                <img src="WhatsApp Image 2026-04-15 at 00.35.11.jpeg" alt="Portrait">
+            </div>
+        </section>
+
+        <h2 class="section-title">À propos de moi</h2>
+        <section class="D">
+            <div class="D1">
+                <h3>Mon parcours</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="D1">
+                <h3>Mes objectifs</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="D1">
+                <h3>Mes qualités</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="D1">
+                <h3>Ce que je recherche</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+            </div>
+        </section>
+
+      <h2 class="section-title">Mes projets</h2>
+<section class="E">
+    <div class="E1">
+        <div class="E2"><img src="téléchargement.jpg" alt="Projet 1"></div>
+        <h3>Mini site vitrine</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel.</p>
+    </div>
+    <div class="E1">
+        <div class="E2"><img src="téléchargement (1).jpg" alt="Projet 2"></div>
+        <h3>Interface web</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel.</p>
+    </div>
+    <div class="E1">
+        <div class="E2"><img src="téléchargement 3.png" alt="Projet 3"></div>
+        <h3>Projet JavaScript</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel.</p>
+    </div>
+    <div class="E1">
+        <div class="E2"><img src="téléchargement (1).jpg" alt="Projet 4"></div>
+        <h3>Travail en groupe</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel.</p>
+    </div>
+    <div class="E1">
+        <div class="E2"><img src="téléchargement 3.png" alt="Projet 5"></div>
+        <h3>Présentation académique</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel.</p>
+    </div>
+    <div class="E1">
+        <div class="E2"><img src="téléchargement.jpg" alt="Projet 6"></div>
+        <h3>Apprentissage continu</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel.</p>
+    </div>
+</section>
+<h2 class="section-title">Mon profil</h2>
+<section class="G">
+    <div class="G1">
+        <div class="G2">2026</div>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+    </div>
+    <div class="G1">
+        <div class="G2">5+</div>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+    </div>
+    <div class="G1">
+        <div class="G2">100%</div>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+    </div>
+    <div class="G1">
+        <div class="G2">UI</div>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+    </div>
+</section>
+
+        <section class="F">
+            <h2>Contact</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.</p>
+            <div class="F1">
+                <button class="btn-primary">Envoyer un email</button>
+                <button class="btn-white">Télécharger mon CV</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
